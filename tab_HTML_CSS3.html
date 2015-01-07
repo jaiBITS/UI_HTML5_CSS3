@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+<title>Tab Structure only CSS3</title>
+</head>
+
+   <div class=menu>
+     <a href="#item1">Mobile</a>
+      <a href="#item2">Clothings</a> 
+      <a href="#item3">Electronics</a> 
+       </div>
+      
+      <div class=items>
+     <p id=item1> This is text for content for tab 1. This content will be called when tab1 is called.<b> For Tab1 </b>  </p>
+     <p id=item2> Content for <b> TAB 2 .</b> This content belong to Tab 2.  </p>
+     <p id=item3> MySmartPrice is a platform which lets you discover the best products across a wide array of categories that include Mobiles, Electronics, Computers, Fashion and Lifestyle, Cameras, Books, Appliances and Personal Care.  </p>
+    </div>
+   
+
+<style>
+.items p:not(:target) {display: none}
+.items p:target {display: block; outline: none}
+.menu {margin: 0; padding: 4px; color: black}
+.menu a {
+	background-color: #DDD;
+	padding:1%; 
+	margin:0.5%; 
+	display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  z-index:100;
+  text-decoration:none;
+  border-radius: 1em;
+  border:thin;
+	}
+.menu a:before{
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: calc(50% - 10px);
+  bottom: 0;
+  border-style: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: #e1e1e1 transparent transparent transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+	}
+.menu a:hover, .menu a:focus, .menu a:active {
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+   }
+.menu a:hover:before, .menu a:focus:before, .menu a:active:before {
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  }
+.items 
+{
+width:95%;
+height: 0.5%;
+padding:0.5%;
+background-color:#EEE;
+border-radius:1em;
+box-shadow:1px;
+border:thin;
+border-color:#093;
+display: block;
+border: 1px solid rgba(0,0,0,.1);
+color: #444;
+    }
+.items p {height: 3em; padding:2%; font-weight:500;  overflow: auto; text-align: left; margin: 0}
+</style>
+<body>
+</body>
+</html>
+
