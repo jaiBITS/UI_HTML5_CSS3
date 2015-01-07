@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p id="output"></p>
+
+<script>
+//window.onload(function () {
+var startTime = new Date();
+var outputDiv = document.getElementById('output'); // or $('#output').get(0)
+//});
+
+setInterval(function () {
+    //var mydate = new Date() - startTime;
+    //var outputString = mydate.format('h:mm:ss');
+    //outputDiv.innerHTML = outputString;
+    var mydate = new Date(new Date() - startTime);
+    var hour    = mydate.getHours() - 5;
+    var minute  = mydate.getMinutes() - 30;
+    var second  = mydate.getSeconds(); 
+    outputDiv.innerHTML = hour + ":" + minute + ":" + second;
+    //outputDiv.innerHTML = mydate.getHours();
+}, 1000);                   // Display x in the element
+</script>
+
+</body>
+</html>
